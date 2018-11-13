@@ -251,8 +251,8 @@ public class Polynom implements Polynom_able{
 		for (int i=1; i<=n; i++) {
 			if (this.f(x0) >0) {
 				sum += this.f(x0) * eps;
-				x0 += eps;
 			}
+			x0 += eps;
 		}
 		return sum;
 	}
@@ -295,7 +295,29 @@ public class Polynom implements Polynom_able{
 		throw new RuntimeException("there is no root this domain ");
 	}
 
-
+	/**
+	 * this function is the same like area
+	 * @param x0 starting point
+	 * @param x1 end point
+	 * @param eps = size steps (rectangle width )
+	 * @return the approximated area below X-axis above this function bounded in the range of [x0,x1]
+	 */
+	public double area2(double x0,double x1, double eps){
+		if (x1 < x0) {
+			double a = x0;
+			x0=x1;
+			x1=a;
+		}
+		double n = (x1-x0) / eps;
+		double sum =0;
+		for (int i=1; i<=n; i++) {
+			if (this.f(x0) < 0) {
+				sum += this.f(x0) * eps;
+			}
+			x0 += eps;
+		}
+		return sum*-1;
+	}
 
 
 
