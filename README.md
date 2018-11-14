@@ -14,5 +14,5 @@ Init of Polynom:
 This class implements the interface Polynom_able and support operations as: value at x , derivative , add(Monom), add (Polynom), multiply ,substruct , equals , Iszero , root , area and tostring.
 
 ** in our project we use the code from: https://github.com/eseifert/gral
-
+** link for download the gral.jar: http://trac.erichseifert.de/gral/wiki/Download  --> ​gral-core-0.11.jar (273 KiB)
 Author’s : Amit Znaft and Yuval Cohen
